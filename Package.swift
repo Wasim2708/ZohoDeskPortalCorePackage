@@ -9,13 +9,13 @@ let package = Package(
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "ZohoDeskPortalCorePackage",
-            targets: ["ZohoDeskPortalCorePackage", "ZohoDeskPortalCore"]),
+            targets: ["ZohoDeskPortalCorePackage"]),
     ],
     dependencies: [
         .package(url: "https://github.com/Wasim2708/ZohoDeskPortalUIKitPackage.git", exact: "1.0.0"),
-        .package(url: "https://github.com/Wasim2708/ZohoDeskPortalKBPackage.git", exact: "1.0.0"),
-        .package(url: "https://github.com/Wasim2708/ZohoDeskPortalCommunityPackage.git", exact: "1.0.0"),
-        .package(url: "https://github.com/Wasim2708/ZohoDeskPortalTicketPackage.git", exact: "1.0.0"),
+        .package(url: "https://github.com/Wasim2708/ZohoDeskPortalKBPackage.git", exact: "1.0.1"),
+        .package(url: "https://github.com/Wasim2708/ZohoDeskPortalCommunityPackage.git", exact: "1.0.1"),
+        .package(url: "https://github.com/Wasim2708/ZohoDeskPortalTicketPackage.git", exact: "1.0.1"),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
@@ -28,7 +28,6 @@ let package = Package(
                 .product(name: "ZohoDeskPortalCommunityPackage", package: "ZohoDeskPortalCommunityPackage"),
                 .product(name: "ZohoDeskPortalTicketPackage", package: "ZohoDeskPortalTicketPackage")
             ]
-        ),
-        .binaryTarget(name: "ZohoDeskPortalCore", url: "https://maven.zohodl.com/ZohoDesk/ZohoDeskPortalCore/3.0.12/ZohoDeskPortalCore.zip", checksum: "3dd836be47ccf5b5ff190e759c46d0a970d3fb4a34d075bd1d2c1887d93afd9b")
+        )
     ]
 )
